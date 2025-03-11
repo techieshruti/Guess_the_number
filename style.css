@@ -5,3 +5,28 @@ body {
     background-position: center;
     height: 60vh; /* Make sure the body takes the full viewport height */
 }
+
+h1{
+    text-align: center;
+    padding-top: 250px;
+}
+
+p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.btn{
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    margin-left: 35rem;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.btn:hover{
+    box-shadow: 8px 8px 5px rgb(160, 209, 161);
+    transition: 1s;
+}
