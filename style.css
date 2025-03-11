@@ -1,6 +1,7 @@
 body {
-    background-color: #ffebcd;
-    background-image: url(img/86l8_h6xm_160312.jpg);
-    background-size: cover; /* Adjust width fully, height auto */
-    
+    background-image: url(./img/bg_image.jpg);
+    background-size: cover; /* Ensures the background image covers the screen */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh; /* Make sure the body takes the full viewport height */
 }
