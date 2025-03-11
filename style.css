@@ -1,9 +1,30 @@
-body {
+/* body {
     background-image: url(./img/bg_image.jpg);
+    background-size: cover; /* Ensures the background image covers the screen 
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh; /* Make sure the body takes the full viewport height 
+} */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+
+.start-screen{
+    background-image: url(./img/bg_image1.jpg);
     background-size: cover; /* Ensures the background image covers the screen */
     background-repeat: no-repeat;
     background-position: center;
-    height: 60vh; /* Make sure the body takes the full viewport height */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+    display: none;
 }
 
 h1{
@@ -13,14 +34,13 @@ h1{
 
 p{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .btn{
-    background-color: green;
+    background-color: #815124;
     border: none;
     border-radius: 10px;
-    margin-left: 35rem;
     padding: 1rem;
     color: white;
     font-size: 1rem;
@@ -29,4 +49,26 @@ p{
 .btn:hover{
     box-shadow: 8px 8px 5px rgb(160, 209, 161);
     transition: 1s;
+    background-color: green;
+}
+
+/* game screen */
+
+
+.game-screen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the screen without distortion */
+    z-index: -1;
 }
