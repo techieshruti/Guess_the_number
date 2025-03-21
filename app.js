@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const feedback = document.getElementById("feedback");
     const attemptsText = document.getElementById("attempts");
     const playAgain = document.getElementById("play-again");
+    document.getElementById("win-sound").play();
  
 // Declaring Variables (used throughout the game)
 let secretNumber, attempts;
@@ -50,15 +51,15 @@ startGame.addEventListener("click", () => { // Event listener for "Start Game" s
 
     if(guess == secretNumber)
         {
-            feedback.textContent = `🎉 Correct! You guessed it right! Random number is ${guess}`;
+            feedback.textContent = `🎉 You found the number! The jungle celebrates your victory! Random number is ${guess}`;
         }
     else if(guess > secretNumber)
         {
-            feedback.textContent = "⬇️ Too high! Try a smaller number.";
+            feedback.textContent = "🌴 Too high! The trees are whispering, try lower.";
         }
     else
         {
-            feedback.textContent = "⬆️ Too low! Try a bigger number.";
+            feedback.textContent = "🐒 Too low! The monkeys say go higher.";
         }
     
     // Update Attempts Display    

@@ -10,10 +10,11 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* Prevents scrolling */
+    
 }
 
 
-.start-screen{
+#start-screen{
     background-image: url(./img/bg_image1.jpg);
     background-size: cover; /* Ensures the background image covers the screen */
     background-repeat: no-repeat;
@@ -37,7 +38,7 @@ p{
     font-size: 1.25rem;
 }
 
-.btn{
+#start_game{
     background-color: #815124;
     border: none;
     border-radius: 10px;
@@ -46,7 +47,7 @@ p{
     font-size: 1rem;
 }
 
-.btn:hover{
+#start_game:hover{
     box-shadow: 8px 8px 5px rgb(160, 209, 161);
     transition: 1s;
     background-color: green;
@@ -55,14 +56,15 @@ p{
 /* game screen */
 
 
-.game-screen {
+#game-screen {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    font-family: 'Papyrus', cursive;
 }
 
-.video-container {
+#video-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,23 +76,63 @@ p{
 }
 
 
-.game-screen h1{
+#game-screen h1{
     text-align: center;
     padding-top: 150px;
 }
 
-.game-screen p{
+#game-screen p{
     text-align: center;
     font-size: 1.25rem;
 }
 
-.input_guess {
-    padding: 0.7rem;
-    margin-left: 42%;
+#input_guess {
+    padding: 0.5rem;
+    margin-left: 40%;
     font-size: large;
-    width: 10rem;
+    width: 9rem;
+    border: 2px solid green;;
+    border-radius: 10px;
+    color:#F4E4C1;
+    background-color: #2E8B57;
+}
+
+input::placeholder {
+    color: #FFD700; /* Gold color */
+    opacity: 0.8;
+}
+
+#check-guess{
+    font-size: medium;
+    font-style: Jungle Fever;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    border: 2px solid green;
+    border-radius: 10px;
+    color:#F4E4C1;
+    background-color: #2E8B57;
+}
+
+#check-guess:hover{
+    background-color: #DAA520;
     border: none;
-    border-radius: 8px;
-    color:white;
-    background-color: rgb(7, 101, 7);
+    box-shadow: 0 0 10px #DAA520; 
+    transform: scale(1.10); /* Slightly enlarges button */
+}
+
+#play-again{
+    font-size: medium;
+    margin-left: 42%;
+    padding: 0.5rem;
+    border: 2px solid green;
+    border-radius: 10px;
+    color:#FAF3E0;
+    background-color: #2E8B57;
+}
+
+#play-again:hover{
+    background-color: #DAA520;
+    border: none;
+    box-shadow: 0 0 10px #DAA520; 
+    transform: scale(1.10); /* Slightly enlarges button */
 }

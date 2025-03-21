@@ -7,18 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="start-screen">
+    <div id="start-screen">
         <h1>🔢 Can You Guess the Mystery Number? 🔢</h1>
     <p>"Welcome to the ultimate number-guessing challenge!<br> Test your luck, logic, and intuition in this fun and exciting game."</p>
-    <button class="btn">Start the Challenge!</button>
+    <button id="start_game">Start the Challenge!</button>
     </div>
 
-    <div class="game-screen">
-        <video src="./img/bg_video.mp4" class="video-container" autoplay loop muted playsinline></video>
-        <h1>"Guess the Hidden Number!"</h1>
-        <p>We have picked a secret number between 1 and 100. <br>Can you guess it in the fewest attempts?<br> Enter your guess and let’s see if you’re a mind-reader!</p>
-        <input type="text" class="input_guess" placeholder="Enter your guess!">
-        <button type="submit">Submit</button>
+    <div id="game-screen" class="hidden">
+        <audio id="win-sound" src="win.mp3"></audio>
+        <video src="./img/bg_video.mp4" id="video-container" autoplay loop muted playsinline></video>
+        <h1>🔍 Find the Hidden Number Before the Jungle Spirits Do!</h1>
+        <p><i>A mysterious number is hidden between 1 and 100. Guess it before the jungle spirits take over!</i></p>
+        <p>Can you guess it in the fewest attempts?<br> Enter your guess and let’s see if you’re a mind-reader!</p>
+
+        <input type="text" inputmode="numeric" id="input_guess" placeholder="Enter your guess!" min="1" max="100">
+        <button id="check-guess">Submit</button>
+
+        <p id="feedback"></p>
+        <p id="attempts"></p>
+
+        <button id="play-again" class="hidden">Explore Another Mystery!</button>
     </div>
 
     <script src="app.js"></script>
