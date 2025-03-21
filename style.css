@@ -85,6 +85,11 @@ p{
 }
 
 .input_guess {
-    padding: 1.5rem;
-    margin-left: 30%;
+    padding: 1rem;
+    margin-left: 42%;
+    font-size: large;
+    width: 10rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(7, 101, 7);
 }
