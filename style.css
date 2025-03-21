@@ -72,3 +72,19 @@ p{
     object-fit: cover; /* Ensures video covers the screen without distortion */
     z-index: -1;
 }
+
+
+.game-screen h1{
+    text-align: center;
+    padding-top: 150px;
+}
+
+.game-screen p{
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.input_guess {
+    padding: 1.5rem;
+    margin-left: 30%;
+}
