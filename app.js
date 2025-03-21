@@ -19,7 +19,7 @@ function initializeGame() {
     secretNumber = Math.floor(Math.random() * 100) + 1; // Generate a random number
     attempts = 0; // Reset attempts
     feedback.textContent = ""; // Clear feedback message
-    attempts.textContent = ""; // Clear previous attempt count
+    attemptsText.textContent = ""; // Clear previous attempt count
     inputGuess.value = ""; // Clear input field
     playAgain.classList.add("hidden"); // Hide the "Play Again" button
 } 
@@ -53,7 +53,7 @@ startButton.addEventListener("click", () => { // Event listener for "Start Game"
     // B️- Check Guess
 
     if (guess === secretNumber) {
-        feedback.textContent = `🎉 You found the number! The jungle celebrates your victory! Random number is ${guess}`;
+        feedback.textContent = `🎉 You found the number! The jungle celebrates your victory! hidden number is ${guess}`;
         playAgain.classList.remove("hidden"); // Show play again button
     } else if (guess > secretNumber) {
         feedback.textContent = "🌴 Too high! The trees are whispering, try lower.";

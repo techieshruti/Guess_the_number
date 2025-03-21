@@ -13,7 +13,6 @@ html, body {
     
 }
 
-
 #start-screen{
     background-image: url(./img/bg_image1.jpg);
     background-size: cover; /* Ensures the background image covers the screen */
@@ -54,6 +53,9 @@ p{
 
 /* game screen */
 
+.hidden {
+    display: none !important;
+}
 
 #game-screen {
     position: relative;
