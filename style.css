@@ -29,11 +29,16 @@ html, body {
 h1{
     text-align: center;
     padding-top: 250px;
+    font-weight: 900; /* Maximum boldness */
+    text-shadow: 3px 3px 10px rgba(0, 50, 0, 0.8); /* Jungle shadow effect */
+    color: black; /* Dark brown for jungle theme */
 }
 
 p{
     text-align: center;
     font-size: 1.25rem;
+    font-weight: 600; /* Slightly bolder than normal */
+    color: black; /* Deep brown for contrast */
 }
 
 #start_game{
@@ -63,6 +68,7 @@ p{
     height: 100vh;
     overflow: hidden;
     font-family: 'Papyrus', cursive;
+    color: black; 
 }
 
 #video-container {
