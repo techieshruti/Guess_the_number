@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number Guessing Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Welcome Page -->
     <div id="start-screen">
         <h1>🔢 Can You Guess the Mystery Number? 🔢</h1>
     <p>"Welcome to the ultimate number-guessing challenge!<br> Test your luck, logic, and intuition in this fun and exciting game."</p>
     <button id="start_game">Start the Challenge!</button>
     </div>
 
+    <!-- Game Page (Initially Hidden) -->
     <div id="game-screen" class="hidden">
         <audio id="win-sound" src="win.mp3"></audio>
         <video src="./img/bg_video.mp4" id="video-container" autoplay loop muted playsinline></video>
