@@ -1,55 +1,55 @@
+/* Reset */
 html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevents scrolling */
-    
+    overflow: hidden;
 }
 
-#start-screen{
-    background-image: url(./img/bg_image1.jpg);
-    background-size: cover; /* Ensures the background image covers the screen */
-    background-repeat: no-repeat;
-    background-position: center;
+/* Welcome Screen */
+#start-screen {
+    background: url(./img/bg_image1.jpg) center/cover no-repeat;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-h1{
+/* Typography */
+h1 {
     text-align: center;
     padding-top: 250px;
-    font-weight: 900; /* Maximum boldness */
-    text-shadow: 3px 3px 10px rgba(0, 50, 0, 0.8); /* Jungle shadow effect */
-    color: black; /* Dark brown for jungle theme */
+    font-weight: 900;
+    text-shadow: 3px 3px 10px rgba(0, 50, 0, 0.8);
+    color: black;
 }
 
-p{
+p {
     text-align: center;
     font-size: 1.25rem;
-    font-weight: 600; /* Slightly bolder than normal */
-    color: black; /* Deep brown for contrast */
+    font-weight: 600;
+    color: black;
 }
 
-#start_game{
+/* Buttons */
+button {
     background-color: #815124;
     border: none;
     border-radius: 10px;
     padding: 1rem;
     color: white;
     font-size: 1rem;
+    cursor: pointer;
 }
 
-#start_game:hover{
+button:hover {
     box-shadow: 8px 8px 5px rgb(160, 209, 161);
     transition: 1s;
     background-color: green;
 }
 
-/* game screen */
-
+/* Game Screen */
 .hidden {
     display: none !important;
 }
@@ -60,20 +60,8 @@ p{
     height: 100vh;
     overflow: hidden;
     font-family: 'Papyrus', cursive;
-    color: black; 
+    color: black;
 }
-
-#video-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures video covers the screen without distortion */
-    z-index: -1;
-}
-
 
 #game-screen h1{
     text-align: center;
@@ -85,74 +73,68 @@ p{
     font-size: 1.25rem;
 }
 
-#input_guess {
+/* Background Video */
+#video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Inputs & Buttons */
+#input_guess, #check-guess, #play-again {
+    font-size: medium;
     padding: 0.5rem;
-    margin-left: 40%;
-    font-size: large;
-    width: 9rem;
-    border: 2px solid green;;
+    border: 2px solid green;
     border-radius: 10px;
-    color:#F4E4C1;
+    color: #F4E4C1;
     background-color: #2E8B57;
 }
 
+#input_guess {
+    width: 9rem;
+    margin-left: 40%;
+}
+
+/* Placeholder Color */
 input::placeholder {
-    color: #FFD700; /* Gold color */
+    color: #FFD700;
     opacity: 0.8;
 }
 
-#check-guess{
-    font-size: medium;
-    padding: 0.5rem;
-    margin-left: 0.5rem;
-    border: 2px solid green;
-    border-radius: 10px;
-    color:#F4E4C1;
-    background-color: #2E8B57;
-}
-
-#check-guess:hover{
+/* Button Hover Effects */
+#check-guess:hover, #play-again:hover {
     background-color: #DAA520;
     border: none;
-    box-shadow: 0 0 10px #DAA520; 
-    transform: scale(1.10); /* Slightly enlarges button */
+    box-shadow: 0 0 10px #DAA520;
+    transform: scale(1.08);
 }
 
 #play-again{
-    font-size: medium;
     margin-left: 42%;
-    padding: 0.5rem;
-    border: 2px solid green;
-    border-radius: 10px;
-    color:#FAF3E0;
-    background-color: #2E8B57;
 }
 
-#play-again:hover{
-    background-color: #DAA520;
-    border: none;
-    box-shadow: 0 0 10px #DAA520; 
-    transform: scale(1.10); /* Slightly enlarges button */
-}
+/* Flower Shower */
 #flower-shower {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    pointer-events: none; /* Prevents user interaction */
-    z-index: 1000; /* Ensures it appears above all elements */
+    pointer-events: none;
+    z-index: 1000;
 }
 
 .flower {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-image: url('./img/flower.png'); /* Replace with actual flower image */
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url('./img/flower.png') center/contain no-repeat transparent;
     opacity: 1;
-    background-color: transparent;
     animation: fall 5s linear forwards;
 }
 
@@ -160,3 +142,5 @@ input::placeholder {
     0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
     100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }
+
+
