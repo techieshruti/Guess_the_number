@@ -10,16 +10,20 @@
 
 </head>
 <body>
+    <div id="flower-shower"></div> <!-- 🌸 Container for the falling flowers -->
+    <audio id="victory-sound" src="./audio/win.mp3"></audio> <!-- 🎵 Victory sound -->
+    <audio id="background-music" src="./img/jungle-1-96861.mp3" loop></audio>
+
     <!-- Welcome Page -->
     <div id="start-screen">
         <h1 style="font-family: 'Papyrus', cursive;">🌴 Lost in the Jungle! Can You Find the Secret Number? 🌴</h1>
     <p><i>Deep in the jungle, a hidden number awaits. Only the sharpest explorers can uncover its mystery. <br> Are you ready for the challenge?</i></p>
     <button id="start_game">Start Your Jungle Adventure!</button>
     </div>
-
+    
     <!-- Game Page (Initially Hidden) -->
     <div id="game-screen" class="hidden">
-        <audio id="win-sound" src="win.mp3"></audio>
+        
         <video src="./img/bg_video.mp4" id="video-container" autoplay loop muted playsinline></video>
         <h1>🔍 Find the Hidden Number Before the Jungle Spirits Do!</h1>
         <p><i>A mysterious number is hidden between 1 and 100. Guess it before the jungle spirits take over!</i></p>
@@ -27,6 +31,7 @@
 
         <input type="text" inputmode="numeric" id="input_guess" placeholder="Enter your guess!" min="1" max="100">
         <button id="check-guess">Submit</button>
+       
 
         <p id="feedback"></p>
         <p id="attempts"></p>
